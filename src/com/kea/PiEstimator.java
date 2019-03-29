@@ -6,7 +6,7 @@ public class PiEstimator
     {
         // points plotted inside and outside the circle
         int pointsInsideCircle = 0;
-        int pointsOutsideCircle = 0;
+        int pointsInsideSquare = 0;
 
         // iterate
         for (int i = 0; i < iterations; i++) {
@@ -21,10 +21,10 @@ public class PiEstimator
             }
 
             //the point ALWAYS falls within the square
-            pointsOutsideCircle++;
+            pointsInsideSquare++;
         }
 
         // cast the first operation as double to avoid .0 result
-        return (double)(4 * pointsInsideCircle) / pointsOutsideCircle;
+        return (double)(4 * pointsInsideCircle) / pointsInsideSquare;
     }
 }
