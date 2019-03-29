@@ -22,7 +22,7 @@ public class Main
         int iterations = scanner.nextInt();
 
         //estimate pi with user given iteration count and compare it to the real pi value
-        System.out.println("Approximate value of Pi ≈ " + estimator.estimatePi(iterations));
-        System.out.println("Real value of pi = " + Math.PI);
+        System.out.printf("Approximate value of Pi ≈ %.6f\n", estimator.estimatePi(iterations));
+        System.out.printf("Real value of pi = %.6f", Math.PI);
     }
 }
