@@ -6,25 +6,27 @@ public class PiEstimator
     {
         // points plotted inside and outside the circle
         int pointsInsideCircle = 0;
-        int pointsInsideSquare = 0;
 
         // iterate
         for (int i = 0; i < iterations; i++) {
 
             //generate random points between 0-1
-            double x = Math.random();
-            double y = Math.random();
+            double x = getRandomDouble(0, 1);
+            double y = getRandomDouble(0, 1);
 
             //formula to determine if the point fall within the circle
             if (x*x + y*y <= 1) {
                 pointsInsideCircle++;
             }
-
-            //the point ALWAYS falls within the square
-            pointsInsideSquare++;
         }
 
         // cast the first operation as double to avoid .0 result
-        return (double)(4 * pointsInsideCircle) / pointsInsideSquare;
+        return (double)(4 * pointsInsideCircle) / iterations;
+    }
+
+    private double getRandomDouble(int lowRange, int highRange)
+    {
+        double rand = Math.random()/Math.nextDown(1.0);
+        return lowRange*(1.0 - rand) + highRange*rand;
     }
 }
