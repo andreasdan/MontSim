@@ -24,6 +24,7 @@ public class PiEstimator
         return (double)(4 * pointsInsideCircle) / iterations;
     }
 
+    // returns a double with a range of [lowRange, highRange]
     private double getRandomDouble(int lowRange, int highRange)
     {
         double rand = Math.random()/Math.nextDown(1.0);
