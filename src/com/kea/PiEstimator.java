@@ -4,7 +4,7 @@ public class PiEstimator
 {
     public double estimatePi(int iterations)
     {
-        // points plotted inside and outside the circle
+        // counter of points plotted inside the circle
         int pointsInsideCircle = 0;
 
         // iterate
